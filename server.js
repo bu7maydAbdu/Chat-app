@@ -19,7 +19,7 @@ app.get("/messages", (req, res)=>{
 })
 
 
-
+//post a message in the chat
 app.post("/messages", ()=>{
     Message.create(req.body, (err, newMessage)=>{
        if(err){
