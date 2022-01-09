@@ -7,7 +7,11 @@ const Message = require("./message")
 
 app.use(express.json())
 
+app.get("/", (req, res)=>(
+    console.log("get is working/")
+))
 
+//get function to  get all the messages from database
 app.get("/messages", (req, res)=>{
     Message.find({},(err, data)=>{
         if(err){
@@ -29,4 +33,9 @@ app.post("/messages", ()=>{
            console.log(newMessage)
        }
     })
+})
+
+
+app.listen(5000, ()=>{
+    console.log("server is working")
 })
