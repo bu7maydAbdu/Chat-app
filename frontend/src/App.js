@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React , {useState} from 'react';
+import axios  from "axios"
 import './App.css';
+import Message from './components/Message';
 
 function App() {
+
+ const [messages, setMessages] = useState([])
+
+  const getMessages = ()=>{
+
+  axios
+  .get(`http://localhost:5000/messages`)
+  .then((response) => {
+    // console.log('RESPONSE: ', response);
+    console.log("DATA: ", response.data);
+    setMessages(response.data)
+  })
+  .catch((err) => {
+    console.log("ERR: ", err);
+  });
+  }
+
+  const mapOverMessages = messages.map((messagesObj, i)=>{
+    return  <Message messages={messagesObj}/>
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <button onClick={
+        getMessages
+      }>getmessages</button>
+      
+      {mapOverMessages}
     </div>
   );
 }

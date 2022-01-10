@@ -1,11 +1,15 @@
 const express = require("express")
 const res = require("express/lib/response")
 const app = express()
+const cors = require('cors')
+
 
 const db = require("./db")
 const Message = require("./message")
 
 app.use(express.json())
+app.use(cors())
+
 
 app.get("/", (req, res)=>(
     console.log("get is working/")
@@ -24,12 +28,12 @@ app.get("/messages", (req, res)=>{
 
 
 //post a message in the chat
-app.post("/messages", ()=>{
+app.post("/messages", (req, res)=>{
     Message.create(req.body, (err, newMessage)=>{
        if(err){
            console.log("Error")
        }else{
-           res.status(201).json(newMessage)
+           res.status(201).json("created new message successfully", newMessage)
            console.log(newMessage)
        }
     })
