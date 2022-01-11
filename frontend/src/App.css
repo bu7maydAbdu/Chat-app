@@ -1,9 +1,17 @@
+body {
+  background-color: aquamarine;
+}
+
 .App {
   display: grid;
   grid-template-columns: 1fr;
 margin: auto;
+margin-top: 20vh;
 border: 3px solid black ;
+border-radius: 10px;
 max-width: 500px;
+height: 70vh;
+background-color: white;
 }
 
 .message {
