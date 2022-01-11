@@ -3,6 +3,7 @@ body {
 }
 
 .App {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
 margin: auto;
@@ -27,9 +28,12 @@ overflow: auto;
 
 
 .create-message{
+  position: sticky;
+  bottom: 0;
   display: flex;
   margin: auto;
-  width: 350px;
+  bottom: 0%;
+  width: 500px;
 
 }
 
