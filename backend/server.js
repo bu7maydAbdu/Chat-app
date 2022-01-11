@@ -21,7 +21,7 @@ app.get("/messages", (req, res)=>{
         if(err){
             console.log("error")
         }else{
-            res.json(data)
+            res.status(201).json(data)
         }
     } )
 })
@@ -33,7 +33,7 @@ app.post("/messages", (req, res)=>{
        if(err){
            console.log("Error")
        }else{
-           res.status(201).json("created new message successfully", newMessage)
+           res.status(201).json( newMessage)
            console.log(newMessage)
        }
     })

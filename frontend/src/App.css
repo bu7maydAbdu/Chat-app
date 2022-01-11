@@ -6,17 +6,35 @@ body {
   display: grid;
   grid-template-columns: 1fr;
 margin: auto;
-margin-top: 20vh;
+margin-top: 10vh;
 border: 3px solid black ;
 border-radius: 10px;
-max-width: 500px;
-height: 70vh;
+max-width: 800px;
+height:80vh;
 background-color: white;
+overflow: auto;
 }
 
 .message {
   border: 3px solid black ;
+  border-radius: 10px;
   max-width: 300px;
+  min-width: 50px;
+  height: fit-content;
   text-align: center;
   margin: auto;
+}
+
+
+.create-message{
+  display: flex;
+  margin: auto;
+  width: 350px;
+
+}
+
+.type-message{
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
 }
