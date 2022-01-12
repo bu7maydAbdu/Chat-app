@@ -1,5 +1,6 @@
 body {
-  background-color: aquamarine;
+  background: linear-gradient(90deg, rgb(27, 126, 117) 0%, rgba(14,213,211,1) 0%, rgba(12,138,130,1) 73%);
+
 }
 
 .App {
@@ -7,24 +8,42 @@ body {
   display: grid;
   grid-template-columns: 1fr;
 margin: auto;
-margin-top: 10vh;
-border: 3px solid black ;
-border-radius: 10px;
+margin-top: 5vh;
+/* border: 3px solid black ; */
+/* border-radius: 10px; */
 max-width: 800px;
-height:80vh;
+height:90vh;
 background-color: white;
 overflow: auto;
+border-top: none;
+border-bottom: 3px solid #49dbb0 ;
+border-left: none;
+border-right: none;
+border-radius: 10px;
+padding: 10px;
+background-color: white;
+-webkit-box-shadow: 0 8px 6px -6px black inset;
+-moz-box-shadow: 0 8px 6px -6px black inset;
+     box-shadow: 0 8px 6px -6px black inset;
 }
 
 .message {
-  border: 3px solid black ;
+  /* background: linear-gradient(90deg, rgb(27, 126, 117) 0%, rgba(14,213,211,1) 0%, rgba(12,138,130,1) 73%);
+  color: white; */
+  font-weight: 400;
+  border: 1px solid black ;
   border-radius: 10px;
-  max-width: 300px;
+  max-width: 80%;
   min-width: 50px;
   height: fit-content;
-  text-align: center;
+  /* text-align: left; */
   margin: auto;
   margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-shadow: 0 8px 6px -6px black ;
+  -moz-box-shadow: 0 8px 6px -6px black ;
+       box-shadow: 0 8px 6px -6px black ;
 }
 
 
@@ -35,12 +54,92 @@ overflow: auto;
   display: flex;
   margin: auto;
   bottom: 0%;
-  width: 700px;
+  width: 99%;
 
 }
 
 .type-message{
-  width: 500px;
+  width: 90%;
   padding: 20px;
   border-radius: 10px;
+  -webkit-box-shadow: 0 8px 6px -6px black ;
+  -moz-box-shadow: 0 8px 6px -6px black ;
+       box-shadow: 0 8px 6px -6px black ;
+}
+
+.send-button{
+  background-color: transparent;
+  border: none;
+}
+
+.send-icon {
+  fill: rgb(27, 126, 117);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  animation-name: jumping;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+}
+.send-icon:hover{
+  /* transform: scale(1.2); */
+  animation-name: jumping;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes jumping {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    fill: #49dbb0;
+  }
+  100% {
+    transform: scale(1);
+    fill: rgb(27, 126, 117);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* scroll bar */
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow:  0 0 5px grey inset; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+ 
+  background: #49dbb0; 
+  border-radius: 10px;
+  transition: all 0.9s ease-in-out;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1b7e75; 
 }
