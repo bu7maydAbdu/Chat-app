@@ -1,10 +1,15 @@
-import React , {useState} from 'react';
+import React , {useState, useEffect} from 'react';
 import axios  from "axios"
 import './App.css';
 import Message from './components/Message';
 import CreateMessage from './components/CreateMessage';
 
 function App() {
+
+
+  useEffect(()=>{
+    getMessages()
+  },[])
 
  const [messages, setMessages] = useState([])
 
@@ -43,9 +48,9 @@ getMessages()
   return (
     <div className="App">
 
-      <button onClick={
+      {/* <button onClick={
         getMessages
-      }>getmessages</button>
+      }>getmessages</button> */}
       
       {mapOverMessages}
 

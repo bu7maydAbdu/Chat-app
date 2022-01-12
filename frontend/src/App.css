@@ -24,21 +24,23 @@ overflow: auto;
   height: fit-content;
   text-align: center;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 
 .create-message{
+  justify-content: center;
   position: sticky;
   bottom: 0;
   display: flex;
   margin: auto;
   bottom: 0%;
-  width: 500px;
+  width: 700px;
 
 }
 
 .type-message{
-  width: 400px;
+  width: 500px;
   padding: 20px;
   border-radius: 10px;
 }
