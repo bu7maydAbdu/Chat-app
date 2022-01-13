@@ -1,8 +1,12 @@
 import React , {useState, useEffect} from 'react';
+import { Routes, Route, Link } from "react-router-dom";
+
 import axios  from "axios"
 import './App.css';
 import Message from './components/Message';
 import CreateMessage from './components/CreateMessage';
+import OnlineUsers from './components/OnlineUsers';
+import ProfileInfo from './components/ProfileInfo';
 
 function App() {
 
@@ -48,13 +52,21 @@ getMessages()
   return (
     <div className="App">
 
+      <ProfileInfo/>
+
+      <div className='chat-window'>
+
       {/* <button onClick={
         getMessages
       }>getmessages</button> */}
       
       {mapOverMessages}
+      
 
     <CreateMessage  createNewMessage={createNewMessage} />
+    </div>
+
+    <OnlineUsers/>
     </div>
   );
 }
