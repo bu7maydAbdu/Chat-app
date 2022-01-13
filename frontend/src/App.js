@@ -7,6 +7,7 @@ import Message from './components/Message';
 import CreateMessage from './components/CreateMessage';
 import OnlineUsers from './components/OnlineUsers';
 import ProfileInfo from './components/ProfileInfo';
+import Login from './components/Login';
 
 function App() {
 
@@ -52,6 +53,12 @@ getMessages()
   return (
     <div className="App">
 
+
+      <Routes>
+
+        <Route path="/" element={<Login/>} />
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/home" element={<div className='chat-page'>
       <ProfileInfo/>
 
       <div className='chat-window'>
@@ -67,6 +74,14 @@ getMessages()
     </div>
 
     <OnlineUsers/>
+
+    
+    </div>} />
+
+      </Routes>
+    
+
+
     </div>
   );
 }
