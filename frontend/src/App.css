@@ -4,6 +4,51 @@ body {
 
 }
 .App {
+margin: 0;
+padding: 0;
+}
+
+
+.login-page{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+height: 100vh;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* background-color: white; */
+  width: 25vw;
+  height: 25vh;
+}
+
+.input-username{
+  border: none;
+  background-color: transparent;
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 6px -6px black inset;
+  -moz-box-shadow: 0 8px 6px -6px black inset;
+       box-shadow: 0 8px 6px -6px black inset;
+}
+
+.submit-button {
+  margin: auto;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+
+
+.chat-page{
   display: grid;
   grid-template-columns: 25vw 1fr 25vw;
 }
@@ -56,7 +101,8 @@ background-color: rgba(255, 255, 255, 0.089);
 .message {
   /* background: linear-gradient(90deg, rgb(27, 126, 117) 0%, rgba(14,213,211,1) 0%, rgba(12,138,130,1) 73%);
   color: white; */
-  background-color: rgba(14, 213, 210, 0.158);
+  /* background-color: rgba(14, 213, 210, 0.158); */
+ background-color: #49dbaf9f  ;
   font-weight: 500;
   border: none ;
   border-radius: 10px;
