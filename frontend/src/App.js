@@ -8,6 +8,7 @@ import CreateMessage from './components/CreateMessage';
 import OnlineUsers from './components/OnlineUsers';
 import ProfileInfo from './components/ProfileInfo';
 import Login from './components/Login';
+import Registration from "./components/Registration"
 
 function App() {
 
@@ -58,6 +59,7 @@ getMessages()
 
         <Route path="/" element={<Login/>} />
         <Route path="/login" element={<Login/>}/>
+        <Route path="/registration" element={<Registration/>}/>
         <Route path="/home" element={<div className='chat-page'>
       <ProfileInfo/>
 

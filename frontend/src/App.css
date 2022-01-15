@@ -9,14 +9,14 @@ padding: 0;
 }
 
 
-.login-page{
+.login-page, .registration-page {
   display: grid;
   justify-content: center;
   align-items: center;
 height: 100vh;
 }
 
-.login-form {
+.login-form, .registration-form {
   display: grid;
   grid-template-columns: 1fr;
   /* background-color: white; */
@@ -24,7 +24,7 @@ height: 100vh;
   height: 25vh;
 }
 
-.input-username{
+.input-username-email-password {
   border: none;
   background-color: transparent;
   color: white;

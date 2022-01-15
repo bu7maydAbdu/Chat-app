@@ -6,7 +6,8 @@ export default function Login() {
 
             <form className='login-form'>
 
-            <input className='input-username' type="text" placeholder='write your name here'/>
+            <input className='input-username-email-password' type="email" placeholder='write your name here'/>
+            <input className='input-username-email-password' type="password" placeholder='enter your password here'/>
             <button className='submit-button'>Submit</button>
 
             </form>
